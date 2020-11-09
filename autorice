@@ -1,39 +1,17 @@
 #!/bin/sh
-install_yay() {
-    cd 
-    git clone https://aur.archlinux.org/yay.git
-    cd yay
-    makepkg -si
-    rm -rf yay
-}
-install_packages() {
-    cd "$HOME/auto-rice"
-    yay -Syu
-    for package in $(cat packages)
-    do
-        yay -S  --noconfirm --needed "$packages"
-    done
-}
-install_nvidia() {
-	cd
-	git clone https://aur.archlinux.org/nvidia-390xx.git
-	cd nvidia-390xx
-	makepkg -si
-	rm -rf nvidia-390xx
-}	
-get_dotfiles() {
-    cd
-    git clone https://gitlab.com/mr-kat/dot-files
-    cd dot-files/dwm-6.2
-    make clean install
-    rm -f config.h
-}
-echo Installing yay
-install_yay
-echo Installing other packages
-install_packages
-echo Installing nvidia
-install_nvidia
-echo Getting dotfiles
-get_dotfiles
+    
+sudo pacman -S acpilight dmenu dunst cmus mpv firefox gvfs-mtp pcmanfm gvfs lxappearance file-roller neofetch nitrogen newsboat p7zip ntfs-3g picom pulseaudio pulsemixer scrot sxhkd termite ttf-nerd-fonts-symbols ttf-jetbrains-mono ranger rtorrent wget xed xorg-server udiskie unzip xorg-xinput xorg-xinit xorg-xrandr xorg-xsetroot  --needed --noconfirm
 
+git clone --depth 1 https://aur.archlinux.org/yay-bin.git && cd yay-bin && makepkg -si --needed --noconfirm && cd .. && yay -S nvidia-390xx --needed --noconfirm
+    
+
+git clone --depth 1 https://gitlab.com/mr-kat/dot-files.git && cd dot-files/dwm-6.2
+
+
+sudo rm -f config.h && sudo make clean install && cd .. 
+
+
+cd slstatus && sudo make clean install && cd .. && cd black-GTK/sample && sudo make install && cd 
+
+
+cd dotfiles && cp -r .config .xinitrc .vim .vimrc .newsboat .bashrc /$HOME/ && cd && startx  
