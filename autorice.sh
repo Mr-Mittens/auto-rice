@@ -1,10 +1,10 @@
 #!/bin/sh
-    
-sudo pacman -S acpilight dmenu dunst cmus mpv firefox gvfs-mtp pcmanfm gvfs lxappearance file-roller neofetch nitrogen newsboat p7zip ntfs-3g picom pulseaudio pulsemixer scrot sxhkd termite ttf-nerd-fonts-symbols ttf-jetbrains-mono ranger rtorrent wget xed xorg-server udiskie unzip xorg-xinput xorg-xinit xorg-xrandr xorg-xsetroot  --needed --noconfirm
+
+chmod +x pkgs.sh && ./pkgs.sh    
 
 git clone --depth 1 https://aur.archlinux.org/yay-bin.git && cd yay-bin && makepkg -si --needed --noconfirm && cd .. && yay -S nvidia-390xx --needed --noconfirm
     
-
+    
 git clone --depth 1 https://gitlab.com/mr-kat/dot-files.git && cd dot-files/dwm-6.2
 
 
