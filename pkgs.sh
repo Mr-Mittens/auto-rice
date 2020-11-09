@@ -1,0 +1,1 @@
+sudo pacman -S acpilight dmenu dunst cmus mpv firefox gvfs-mtp pcmanfm gvfs lxappearance file-roller neofetch nitrogen newsboat p7zip ntfs-3g picom pulseaudio pulsemixer scrot sxhkd termite ttf-nerd-fonts-symbols ttf-jetbrains-mono ranger rtorrent wget xed xorg-server udiskie unzip xorg-xinput xorg-xinit xorg-xrandr xorg-xsetroot  --needed --noconfirm
