@@ -8,7 +8,7 @@ git clone --depth 1 https://aur.archlinux.org/yay-bin.git && cd yay-bin && makep
 git clone --depth 1 https://gitlab.com/mr-kat/dot-files.git && cd dot-files/dwm-6.2
 
 
-sudo rm -f config.h && sudo make clean install && cd .. 
+sudo make clean install && sudo rm -f config.h && cd .. 
 
 
 cd slstatus && sudo make clean install && cd .. && cd black-GTK/sample && sudo make install && cd 
