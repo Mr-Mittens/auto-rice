@@ -14,4 +14,4 @@ sudo make clean install && sudo rm -f config.h && cd ..
 cd slstatus && sudo make clean install && cd .. && cd black-GTK/sample && sudo make install && cd 
 
 
-cd dotfiles && cp -r .config .xinitrc .vim .vimrc .newsboat .bashrc /$HOME/ && cd && startx  
+cd dot-files && cp -r .config .xinitrc .vim .vimrc .newsboat .bashrc /$HOME/ && cd && startx  
